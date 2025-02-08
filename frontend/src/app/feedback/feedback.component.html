@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title text-center">Submit Feedback</h3>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="submitFeedback()">
+              <div class="mb-3">
+                <label for="reviewId" class="form-label">Review ID</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="reviewId"
+                  [(ngModel)]="reviewId"
+                  name="reviewId"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="feedback" class="form-label">Feedback</label>
+                <textarea
+                  class="form-control"
+                  id="feedback"
+                  [(ngModel)]="feedback"
+                  name="feedback"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Employee Name</th>
+      <th scope="col">Feedback</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let review of reviews">
+      <td>{{ review.employeeId.name }}</td> 
+      <td>
+        <ul>
+          <li *ngFor="let item of review.feedback">{{ item }}</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
